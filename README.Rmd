@@ -1,0 +1,40 @@
+# distill_postcard_test
+
+https://www.youtube.com/watch?v=fPSWqdJr_EY&ab_channel=AlisonHill
+
+https://laderast.github.io/index.html
+
+https://www.youtube.com/watch?v=0IWTJNMga-g&ab_channel=DataScienceSnippets
+
+https://www.youtube.com/watch?v=_6gwgAZ4vrc&ab_channel=EstaTiDados
+
+https://joshuacook.netlify.app/post/wagenmakers-analysis-description/
+
+
+```{r}
+library(distill)
+
+create_website(dir = ".", title = "mfeo")
+
+create_blog(dir = ".", title = "my_blog")
+
+postcards::create_postcard(template = "jolla", file = "about.Rmd")
+
+postcards::create_postcard(file = "rony.Rmd")
+
+create_article(file = "tobi2",         # future name of .Rmd file
+               template = "jolla",    # name of template
+               package = "postcards") 
+
+create_theme("postcards")               
+
+
+postcards::create_postcard(file = "home.Rmd",   template = "trestles")
+
+postcards::create_postcard(file = "index.Rmd",   template = "solana")
+
+postcards::create_postcard(file = "index2.Rmd",   template = "trestles")
+
+distill::create_post(title = "my secind post")
+```
+
